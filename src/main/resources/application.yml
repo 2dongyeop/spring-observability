@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-observability
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, prometheus
+        exclude: info
+      base-path: /actuator  # default : /actuator
